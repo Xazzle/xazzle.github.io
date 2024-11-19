@@ -1,0 +1,288 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    color: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #6B9080;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.search-container {
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#song-search {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+/* Theme toggle buttons */
+.theme-toggle {
+    display: flex;
+    align-items: center; /* Выравнивание кнопок по центру вертикально */
+    justify-content: center;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+
+/* Убираем отображение по умолчанию */
+form {
+    display: none;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 40px 0 auto;
+    padding: 20px;
+    background-color: #eaf4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2, .profile-container h3 {
+    text-align: center;
+}
+
+.user-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.liked-albums ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.liked-albums li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f6fff8;
+    border: 1px solid #a4c3b2;
+    border-radius: 5px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.faq-item h4 {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.faq-item h4:hover {
+    color: #6B9080; /* Цвет при наведении */
+}
+
+.answer {
+    margin-left: 20px;
+    color: #555;
+    transition: opacity 0.3s;
+}
+
+.d-none {
+    display: none;
+}
+
+.theme-toggle button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.theme-toggle button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Songs list */
+.songs-list {
+    margin: 30px auto 0;
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    justify-content: center; /* Изменено с "justify-items: center" */
+}
+
+
+.song-item {
+    width: 100%;
+    max-width: 250px; /* Уменьшена ширина карточек */
+    padding: 15px; /* Уменьшены отступы внутри карточек */
+    background-color: #A4C3B2;
+    border-radius: 10px;
+    color: #212121;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.song-item img {
+    width: 100%;
+    height: 250px; /* Уменьшена высота изображений */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.song-item h3 {
+    margin: 10px 0;
+}
+
+.song-item p {
+    margin: 0;
+}
+
+/* Hover effect on song item */
+.song-item:hover {
+    transform: scale(1.05);
+}
+/* Dark theme */
+body.dark-mode {
+    background-color: #212121;
+    color: #fff; /* Убедитесь, что основной текст будет белым */
+}
+
+body.dark-mode header {
+    background-color: #444;
+}
+
+body.dark-mode .profile-container {
+    background-color: #444;
+}
+
+body.dark-mode nav a {
+    color: #fff; /* Навигационные ссылки тоже должны быть белыми */
+}
+body.dark-mode .liked-albums li {
+    background-color: #444; /* Темный фон для блока */
+    color: #fff; /* Белый текст для контраста */
+}
+
+body.dark-mode .liked-albums h2 {
+    color: #fff; /* Белый цвет для заголовка списка */
+}
+
+body.dark-mode .song-item {
+    background-color: #444;
+    color: #fff; /* Песни должны быть с белым текстом */
+}
+
+body.dark-mode #song-search {
+    background-color: #333;
+    color: #fff; /* Поиск тоже должен быть с белым текстом */
+}
+
+body.dark-mode .faq-item h4 {
+    color: #fff; /* Вопросы FAQ должны быть белыми */
+}
+
+body.dark-mode .answer {
+    color: #ddd; /* Ответы FAQ должны быть светло-серыми */
+}
+
+/* Transition for theme change */
+body, header, .songs-list, .faq-item h4, .answer {
+    transition: background-color 0.3s, color 0.3s; /* Добавляем плавный переход для текста и фона */
+}
+
+/* Media Queries for Responsiveness */
+/* Mobile view: 1 column for songs, search bar smaller */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .search-container {
+        margin: 10px 0;
+        width: 100%;
+    }
+    #song-search {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .songs-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .song-item {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Tablet view: 2 columns for songs */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .songs-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .song-item {
+        width: 220px; /* Adjust width for tablet screens */
+    }
+    #song-search {
+        width: 250px;
+    }
+}
+
+/* Large screen view: 3 columns for songs */
+@media (min-width: 1025px) {
+    .songs-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .song-item {
+        width: 250px;  /* Default width for larger screens */
+    }
+    #song-search {
+        width: 300px;
+    }
+}

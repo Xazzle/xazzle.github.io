@@ -1,0 +1,114 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #212121;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/* Кнопки для переключения темы */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.theme-toggle button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Темная тема */
+body.dark-mode {
+    background-color: #212121;
+    color: #fff;
+}
+
+body.dark-mode button {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
+}
+
+/* Форма регистрации и логина */
+.form-container input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+#auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+/* Центрирование формы и сдвиг заголовка при показе формы */
+#auth-form h2 {
+    margin-bottom: 20px;
+}
+
+/* Когда форма отображается */
+#auth-form.show {
+    transform: translateY(-30px);
+}
+
+.auth-container.show h1 {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 20px;
+}

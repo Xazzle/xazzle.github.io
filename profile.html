@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicSD | Profile</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body id="body">
+    <header>
+        <div class="logo">
+            <h1>MusicAD</h1>
+        </div>
+        <nav>
+            <a href="main.html">Library</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+        <div class="theme-toggle">
+            <button id="light-theme-btn" onclick="toggleTheme('light')">🌕</button>
+            <button id="dark-theme-btn" onclick="toggleTheme('dark')">🌑</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <h2>User Profile</h2>
+            <div class="user-info">
+                <p><strong>Name:</strong> <span id="user-name">Unknown</span></p>
+                <p><strong>Email:</strong> <span id="user-email">Unknown</span></p>
+            </div>
+            <div class="liked-albums">
+                <h3>Liked Albums</h3>
+                <ul id="liked-albums-list">
+                    <!-- Favorite albums will be dynamically generated here -->
+                </ul>
+            </div>
+        </div>
+    </main>
+    <section id="faq" class="container mt-5">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+        <h4 class="faq-question">What is MusicAD?</h4>
+        <p class="answer d-none">MusicSD is your personal music guide! Add your favorite albums to favorites, create a personalized playlist, and enjoy a user-friendly interface with light and dark mode support.</p>
+    </div>
+    <div class="faq-item">
+        <h4 class="faq-question">What products do you sell?</h4>
+        <p class="answer d-none">We sell phones, laptops, and headphones from top brands.</p>
+    </div>
+</section>
+
+
+    <script src="profile.js"></script>
+</body>
+
+    <footer style="text-align: center; padding: 10px; font-size: 0.9rem; color: #555;">
+        Created by Daniyar and Sanzhar
+    </footer>
+</html>

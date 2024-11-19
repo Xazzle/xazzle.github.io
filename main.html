@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicSD | Main Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body id="body">
+    <header>
+        <div class="logo">
+            <h1>MusicAD</h1> <!-- Здесь ваше название сайта -->
+        </div>
+        <nav>
+            <a href="main.html">Library</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="song-search" placeholder="Search songs..." oninput="filterSongs()">
+        </div>
+        <div class="theme-toggle">
+            <button id="light-theme-btn" onclick="toggleTheme('light')">🌕</button>
+            <button id="dark-theme-btn" onclick="toggleTheme('dark')">🌑</button>
+        </div>
+    </header>
+    <main>
+        <div class="songs-list">
+            <!-- Song items will be dynamically generated here -->
+        </div>
+    </main>
+    <footer style="text-align: center; padding: 10px; font-size: 0.9rem; color: #555;">
+        Created by Daniyar and Sanzhar
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
